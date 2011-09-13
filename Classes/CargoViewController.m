@@ -15,6 +15,7 @@
 }
 
 -(void)cargoContainerDidGetTapped {
+    cargoColorChooser.modalPresentationStyle = UIModalPresentationFormSheet;
     [self presentModalViewController:cargoColorChooser animated:YES];
 //    cargoView.backgroundColor = [UIColor colorWithRed:(random()%3)/3.0
 //                                                green:(random()%3)/3.0

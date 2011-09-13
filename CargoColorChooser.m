@@ -50,12 +50,8 @@
 	return YES;
 }
 
--(IBAction) dismiss {
-    [self dismissModalViewControllerAnimated:YES];
-}
-
 -(IBAction) setCargoColor:(id)sender {
     cargoView.backgroundColor = ((UIView *)sender).backgroundColor;
-    [self dismiss];
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

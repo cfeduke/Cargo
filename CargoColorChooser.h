@@ -12,6 +12,5 @@
     IBOutlet UIView *cargoView;
 }
 @property (nonatomic, retain) IBOutlet UIView *cargoView;
--(IBAction) dismiss;
 -(IBAction) setCargoColor:(id)sender;
 @end
