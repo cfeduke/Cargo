@@ -1,10 +1,12 @@
 #import <UIKit/UIKit.h>
+#import "CarDriver.h"
 #import "CargoColorChooser.h"
 
 @interface CargoViewController : UIViewController {
-    UIView *cargoView;
-    CargoColorChooser *cargoColorChooser;
+    IBOutlet UIView *cargoView;
+    IBOutlet CargoColorChooser *cargoColorChooser;
+    IBOutlet CarDriver *carDriver;
+    UIPopoverController *driveControls;
 }
-@property (nonatomic, retain) IBOutlet UIView *cargoView;
-@property (nonatomic, retain) IBOutlet CargoColorChooser *cargoColorChooser;
+-(IBAction) showOrHideDriveControls:(id)sender;
 @end

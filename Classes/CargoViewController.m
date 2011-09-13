@@ -2,9 +2,6 @@
 
 @implementation CargoViewController
 
-@synthesize cargoView;
-@synthesize cargoColorChooser;
-
 -(void)viewDidLoad {
     [super viewDidLoad];
     [cargoView addGestureRecognizer:
@@ -25,6 +22,25 @@
                            animated:YES];
     
     //[self presentModalViewController:cargoColorChooser animated:YES];
+}
+
+-(IBAction)showOrHideDriveControls:(id)sender {
+    if (driveControls) {
+        [driveControls dismissPopoverAnimated:YES];
+        driveControls = nil;
+    } else {
+        driveControls = [[UIPopoverController alloc]
+                                         initWithContentViewController:carDriver];
+        driveControls.popoverContentSize = carDriver.view.frame.size;
+        [driveControls presentPopoverFromBarButtonItem:sender 
+                         permittedArrowDirections:UIPopoverArrowDirectionAny 
+                                         animated:YES];
+        driveControls.delegate = self;
+    }
+}
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    driveControls = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
