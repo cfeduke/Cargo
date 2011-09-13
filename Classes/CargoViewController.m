@@ -15,12 +15,12 @@
 }
 
 -(void)cargoContainerDidGetTapped {
-    cargoColorChooser.modalPresentationStyle = UIModalPresentationFormSheet;
-    [self presentModalViewController:cargoColorChooser animated:YES];
-//    cargoView.backgroundColor = [UIColor colorWithRed:(random()%3)/3.0
-//                                                green:(random()%3)/3.0
-//                                                 blue:(random()%3)/3.0
-//                                                alpha:1];
+    UIPopoverController *popover = [[UIPopoverController alloc]
+                                    initWithContentViewController:cargoColorChooser];
+    popover.popoverContentSize = cargoColorChooser.view.frame.size;
+    [popover presentPopoverFromRect:cargoView.bounds inView:cargoView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    
+    //[self presentModalViewController:cargoColorChooser animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
