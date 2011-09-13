@@ -18,7 +18,10 @@
     UIPopoverController *popover = [[UIPopoverController alloc]
                                     initWithContentViewController:cargoColorChooser];
     popover.popoverContentSize = cargoColorChooser.view.frame.size;
-    [popover presentPopoverFromRect:cargoView.bounds inView:cargoView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    [popover presentPopoverFromRect:cargoView.bounds 
+                             inView:cargoView
+           permittedArrowDirections:UIPopoverArrowDirectionRight + UIPopoverArrowDirectionLeft
+                           animated:YES];
     
     //[self presentModalViewController:cargoColorChooser animated:YES];
 }

@@ -433,10 +433,10 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>337632127.77118099</real>
-		<string>{0, 1019}</string>
+		<real>337632223.278126</real>
+		<string>{0, 1119}</string>
 		<false/>
-		<string>{760, 0}</string>
+		<string>{806, 0}</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -1822,7 +1822,7 @@
 				<integer>175</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>337632108.629502</real>
+			<real>337632211.48600698</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -1833,7 +1833,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 2:41 PM</string>
+		<string>Today at 2:43 PM</string>
 		<integer>234</integer>
 		<string>Cargo</string>
 		<dict>
@@ -3518,9 +3518,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>337632127.77310699</real>
-		<string>{0, 1019}</string>
-		<string>{760, 0}</string>
+		<real>337632223.28000998</real>
+		<string>{0, 1119}</string>
+		<string>{806, 0}</string>
 		<string>-cargoContainerDidGetTapped</string>
 		<dict>
 			<key>$class</key>
