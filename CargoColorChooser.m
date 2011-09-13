@@ -11,6 +11,7 @@
 @implementation CargoColorChooser
 
 @synthesize cargoView;
+@synthesize popoverController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +53,6 @@
 
 -(IBAction) setCargoColor:(id)sender {
     cargoView.backgroundColor = ((UIView *)sender).backgroundColor;
-    [self dismissModalViewControllerAnimated:YES];
+    [self.popoverController dismissPopoverAnimated:YES];
 }
 @end

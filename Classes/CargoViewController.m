@@ -18,6 +18,7 @@
     UIPopoverController *popover = [[UIPopoverController alloc]
                                     initWithContentViewController:cargoColorChooser];
     popover.popoverContentSize = cargoColorChooser.view.frame.size;
+    cargoColorChooser.popoverController = popover;
     [popover presentPopoverFromRect:cargoView.bounds 
                              inView:cargoView
            permittedArrowDirections:UIPopoverArrowDirectionRight + UIPopoverArrowDirectionLeft
