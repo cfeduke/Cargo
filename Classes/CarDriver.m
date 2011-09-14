@@ -12,21 +12,33 @@
 
 -(IBAction)buttonClicked:(id)sender {
     UIButton *button = (UIButton *)sender;
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelay:0.0];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    
+    CGRect frame = cargoView.frame;
+    
     switch (button.tag) {
         case 1: // up
-            cargoView.center = CGPointMake(cargoView.center.x, cargoView.center.y - 10);
+            frame.origin.y -= CARGO_MOVEMENT_STEP;
             break;
         case 2: // down
-            cargoView.center = CGPointMake(cargoView.center.x, cargoView.center.y + 10);
+            frame.origin.y += CARGO_MOVEMENT_STEP;
             break;
         case 3: // right
-            cargoView.center = CGPointMake(cargoView.center.x + 10, cargoView.center.y);
+            frame.origin.x += CARGO_MOVEMENT_STEP;
             break;
         case 4: // left
-            cargoView.center = CGPointMake(cargoView.center.x - 10, cargoView.center.y);
+            frame.origin.x -= CARGO_MOVEMENT_STEP;
             break;
         default:
             break;
     }
+    
+    cargoView.frame = frame;
+    
+    [UIView commitAnimations];
 }
 @end
